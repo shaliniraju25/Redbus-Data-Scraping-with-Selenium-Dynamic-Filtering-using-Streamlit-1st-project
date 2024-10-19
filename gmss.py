@@ -168,6 +168,9 @@ elif web == "Bus details":
     if pd.isna(max_price):
         max_price = 1000  
 
+    if min_price == max_price:
+        max_price = min_price + 1  
+
     selected_price_range = slt.slider("💰 Select Price Range", 
                                       min_value=int(min_price), 
                                       max_value=int(max_price), 
